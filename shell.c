@@ -24,5 +24,5 @@ int main(int argc, char** argv) {
 }
 
 int commandIsNotExit(char* command) {
-  return 1;
+  return strcmp(command, "exit");
 }
