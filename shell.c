@@ -5,7 +5,24 @@
 
 #include <stdio.h>
 
+int commandIsNotExit(char* command);
+
+/* exit: should terminate the shell
+
+*/
 int main(int argc, char** argv) {
-  printf("Hello World!\n");
+  printf("yash: yet another shell!\n");
+
+  char command[100] = {0};
+  while (commandIsNotExit(command)) {
+    printf("> ");
+    scanf("%s", command);
+    printf("%s\n", command);
+  }
+
   return 0;
+}
+
+int commandIsNotExit(char* command) {
+  return 1;
 }
